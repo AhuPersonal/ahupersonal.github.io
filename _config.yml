@@ -79,8 +79,8 @@ analytics:
 author:
   name             : "Ahu Oral"
   avatar           : "https://avatars1.githubusercontent.com/u/22137155" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  bio              : "Data Scientist at UBC."
+  location         : "Vancouver, BC"
   email            : "ahupersembe@gmail.com"
   uri              :
   bitbucket        :
@@ -89,7 +89,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : AhuPersonal
   google_plus      :
   keybase          :
   instagram        :
