@@ -6,11 +6,7 @@ tags: [titanic, data science, data test]
 comments: true
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning=FALSE)
-```
-
-```{r, message=FALSE}
+```{r}
 #load library
 
 library(tidyverse)
@@ -22,23 +18,8 @@ library(cowplot)
 
 
 # Lab 3
-<!-- rubric={mechanics:1} -->
-
-<span id="rubric">
-<center>[![1](rubric_img/num_1.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_mech.md)[![Mechanics](rubric_img/mech_pdf.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_mech.md)</center>
-</span> 
-
-<!-- end of rubric snippet -->
-
 
 ### Exercise 1: probabilities, independence 
-<!-- rubric={reasoning:5} -->
-
-<span id="rubric">
-<center>[![5](rubric_img/num_5.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_reasoning.md)[![Reasoning](rubric_img/reasoning_pdf.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_reasoning.md)</center>
-</span> 
-
-<!-- end of rubric snippet -->
 
 0. Recall the definition of independence. If events $A$ and $B$ are independent then $P(A \cap B) =\;?$ Write this fact in a sentence, using the terms "joint probability" and "marginal probability": If $A$ and $B$ are independent then their ...
 
@@ -76,13 +57,6 @@ Therefore the answer is $1 - P(p_L^c \cap p_J^c) = 1- P(p_L^c)P(p_J^c) = 1 - ( (
 
 
 #### (optional) Exercise 1b
-<!-- rubric={reasoning:1} -->
-
-<span id="rubric">
-<center>[![1](rubric_img/num_1.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_reasoning.md)[![Reasoning](rubric_img/reasoning_pdf.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_reasoning.md)</center>
-</span> 
-
-<!-- end of rubric snippet -->
 
 Consider the events $A$ and $B$ and their complements $A^C$, $B^C$. Show that it follows from the independence of $A$ and $B$ that $A^C$ and $B^C$ are also independent.
 
@@ -108,13 +82,6 @@ Remember the [ggplot2 tutorial](https://github.com/jennybc/ggplot2-tutorial) has
 *Hint: if any of your results/plots look funny check the variable type... should it be a factor? an integer?*
 
 #### Exercise 2(a):  exploratory analysis between 2 categorical variables
-<!-- rubric={reasoning:4,mechanics:1} -->
-
-<span id="rubric">
-<center>[![1](rubric_img/num_1.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_mech.md)[![Mechanics](rubric_img/mech_pdf.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_mech.md) &nbsp;[![4](rubric_img/num_4.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_reasoning.md)[![Reasoning](rubric_img/reasoning_pdf.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_reasoning.md)</center>
-</span> 
-
-<!-- end of rubric snippet -->
 
 Here, you will explore the relationship between survived / not survived and either gender or passenger class (your choice between these two). In other words, you will either compare survived vs. gender or survived vs. passenger class.
 
@@ -235,13 +202,7 @@ plot_grid(plot1, plot2)
 They are not independent. Expected frequencies show that ratio of survival for each gender should be equal. However, actual frequencies show that, there are more female survivors, also the ratio of female survivors are more than expected ratio. I think this happened because we know from reality that females and children were allowed to leave the ship and take the rescuer boats first. Thus,being female(gender) affected the survival ratio in titanic.
 
 #### Exercise 2(b):  exploratory analysis between one categorical and one continuous variable
-<!-- rubric={reasoning:4,mechanics:1} -->
 
-<span id="rubric">
-<center>[![1](rubric_img/num_1.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_mech.md)[![Mechanics](rubric_img/mech_pdf.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_mech.md) &nbsp;[![4](rubric_img/num_4.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_reasoning.md)[![Reasoning](rubric_img/reasoning_pdf.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_reasoning.md)</center>
-</span> 
-
-<!-- end of rubric snippet -->
 
 Choose 1 categorical and one continuous variable to explore.
 
@@ -276,13 +237,6 @@ These variables are not independent because average fare of survivors are higher
 
   
 #### Exercise 2(c): exploratory analysis between two continuous variables
-<!-- rubric={reasoning:4,mechanics:1} -->
-
-<span id="rubric">
-<center>[![1](rubric_img/num_1.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_mech.md)[![Mechanics](rubric_img/mech_pdf.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_mech.md) &nbsp;[![4](rubric_img/num_4.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_reasoning.md)[![Reasoning](rubric_img/reasoning_pdf.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_reasoning.md)</center>
-</span> 
-
-<!-- end of rubric snippet -->
 
 Pick 2 continuous variables to explore. 
 
@@ -353,13 +307,6 @@ ggplot(my_titanic, aes(x = age, y = fare)) +
 I think there is a weak dependecy between these variables. The line has a straightforward trend till age 50s. I can assume that the dependent part which is an upward trend in fare as age increases is because older passengers(between 50-70) might have bought more expensive tickets.
 
 ### (optional) Exercise 3: correlation vs. independence 
-<!-- rubric={reasoning:1} -->
-
-<span id="rubric">
-<center>[![1](rubric_img/num_1.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_reasoning.md)[![Reasoning](rubric_img/reasoning_pdf.png)](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_reasoning.md)</center>
-</span> 
-
-<!-- end of rubric snippet -->
 
 Having covariance of zero (or, equivalently, having linear correlation of zero) and being independent are two different things. 
 Classify each of the following cases as either possible or impossible. If you classify as possible, give an example of the two distributions and then empirically show that the covariance is zero (or not zero) in your example by sampling from these distributions and using `cov` or `cor` in R. Note: in the cases where the the covariance is theoretically equal to zero, the sample covariance will not be exactly zero. In this case, do your "demonstration" by showing that the sample covariance approaches zero as the sample size grows large. If you classify as impossible, briefly explain why not.
